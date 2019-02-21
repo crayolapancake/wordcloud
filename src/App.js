@@ -104,29 +104,29 @@ class App extends Component {
   rotateElements = (index) => {
     console.log(index);
     if (index === 0) {
-      return 'rotate(90deg) translate(50px, -170px)'
+      return 'rotate(90deg) translate(37px, -170px)'
     } if (index === 1) {
-      return 'rotate(300deg) translate(65px, 255px)'
+      return 'rotate(300deg) translate(79px, 255px)'
     } if (index === 2) {
-      return 'rotate(320deg) translate(170px, 290px)'
+      return 'rotate(320deg) translate(172px, 295px)'
     } if (index === 3) {
-      return 'rotate(0deg) translate(350px,200px)'
+      return 'rotate(0deg) translate(354px, 210px)'
     } if (index === 4) {
-      return 'rotate(30deg) translate(430px, 90px)'
+      return 'rotate(30deg) translate(442px, 90px)'
     }  if (index === 5) {
-      return 'rotate(65deg) translate(450px, -70px)'
+      return 'rotate(60deg) translate(459px, -45px)'
     }  if (index === 6) {
-      return 'rotate(90deg) translate(400px, -170px)'
+      return 'rotate(90deg) translate(401px, -170px)'
     }  if (index === 7) {
-      return 'rotate(300deg) translate(-280px, 260px)'
+      return 'rotate(300deg) translate(-286px, 260px)'
     }  if (index === 8) {
-      return 'rotate(320deg) translate(-200px, 250px)'
+      return 'rotate(320deg) translate(-185px, 250px)'
     } if (index === 9) {
-      return 'rotate(0deg) translate(-20px, 200px)'
+      return 'rotate(0deg) translate(-7px, 210px)'
     } if (index === 10) {
-      return 'rotate(30deg) translate(70px, 90px)'
+      return 'rotate(30deg) translate(77px, 100px)'
     } if (index === 11) {
-      return 'rotate(65deg) translate(100px, -50px)'
+      return 'rotate(60deg) translate(94px, -40px)'
     }
   }
 
@@ -134,7 +134,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="app">
         {this.state.words.map( (word, index) => {
           return <ul
             key={word.emotion + 1}
@@ -145,10 +145,11 @@ class App extends Component {
               transform: this.rotateElements(index),
               }}
             onClick={() => {this.toggle(index)}}
-          >BEER
-            {/* {word.emotion} */}
+          >
+            {word.emotion}
           </ul>
         })}
+        <div className="circle"/>
       </div>
     )
   }
