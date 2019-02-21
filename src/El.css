@@ -1,0 +1,14 @@
+.El {
+  position: relative;
+  font-size: 20px;
+  border: 1px solid green;
+  padding: 2px;
+  background-color: white;
+  margin: 5px;
+}
+
+/*  not working */
+.El:hover {
+  color: #833;
+  background-color: #388;
+}
